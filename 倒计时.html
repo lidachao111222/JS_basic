@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function countDay(x) {
+
+            let myDate = new Date();
+            let timeNow = myDate.getTime();
+
+
+            // let future = new Date('2019-12-1 00:00:00');
+            let future = new Date(x);
+            let timeFuture = future.getTime();
+
+            let miSec = (timeFuture - timeNow) / 1000;
+
+            let day = parseInt(miSec / 60 / 60 / 24); // 天数
+            let hours = parseInt(miSec / 60 / 60 % 24); //小时
+            let min = parseInt(miSec / 60 % 60); //分钟
+            let sec = parseInt(miSec % 60); //秒
+
+            console.log(' day:'+ day+ ' hour:'+ hours +' min:'+min+ ' sce:'+sec);
+        }
+
+        countDay('2019-12-1 00:00:00');
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //array
+        let arr = ['a1', 'a2', 'a3', 'a4'];
+
+
+
+        //string
+        let str = 'abcdefg';
+
+
+
+        //object
+        let obj = {
+            lastName: 'li'
+        }; //创建对象
+
+        obj['firstNmae'] = 'chao'; // 动态！
+
+        obj.gender = 'male'; //静态！
+
+
+
+
+        //测试array
+        //forEach
+        arr.forEach(function (e, i) {
+            console.log('arrEach内容：' + e);
+            console.log('arrEach索引：' + i);
+        })
+        //for in
+        for (let key in arr) {
+            console.log('arrkey：' + key);
+            console.log('arrkey：' + arr[key]);
+        }
+        //for常规 （不写 =。 = ）
+
+
+
+        //测试string
+        //string 其实有index
+        console.log('我是用索引找的str'+str[3]);
+
+        //string没有forEach
+        // str.forEach(function (e, i) {
+        //     console.log('stringEach内容：' + e);
+        //     console.log('stringEach索引：' + i);
+        // })
+
+        //for常规
+        for (let i = 0; i < str.length; i++) {
+            console.log('stringEach常规索引：' + i);
+            console.log('stringEach常规索引：' + str[i]);
+        }
+        //forin
+        for (let key in str) {
+            console.log('stringIn内容：' + str[key]);
+            console.log('stringIn索引：' + key);
+        }
+
+
+
+        // 对象只能for（in）?  无法常规
+
+        //for（in）
+        for (let key in obj) {
+            console.log(key);
+            console.log(obj[key]);
+        }
+
+        //无法使用
+        // obj.forEach(function(e,i){
+
+        //     console.log(e);
+        //     console.log(i)
+
+        // })
+
+
+
+
+        /*
+        总结： for in 跟常规基本一样！ 但是不用声明变量
+
+         foreach缺点 是不能停下 而且只能用于array。
+         */
+    </script>
+
+</body>
+
+</html>

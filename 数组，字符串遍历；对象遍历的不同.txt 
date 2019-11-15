@@ -1,0 +1,37 @@
+数组遍历用for（）；
+
+
+例如 let a = [1,2,3,4,5,6,7];
+
+for (let i = 0;i<a.length ; i++){
+    console.log(a[i])
+}
+///////////////////////////////////////////////
+
+
+对象遍历用for（in）
+
+
+ex:
+
+let obj = {lastName:'li'};          //创建对象
+
+obj['firstNmae'] = 'chao';          // 动态！
+
+obj.gender = 'male';                  //静态！
+
+
+for (key in obj){
+    console.log(key);
+    console.log(obj[key]);
+}
+
+
+
+////////////////////////////////////////////////////////////////
+
+对对象  或者数组  字符串都可用
+运用.foreach()
+
+
+但是forEach() 不能停下

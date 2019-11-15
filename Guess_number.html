@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function getNumber() {
+            let randomNumber = Math.floor(Math.random() * 10) + 1;
+            return randomNumber;
+        }
+
+        var number = getNumber();
+
+        for (var i = 3; i > 0; i--) {
+            //get number
+            let guessNumber = parseInt(prompt('请输入你要猜的数字(1~10,三次机会) '));
+
+            if (guessNumber > number) {
+                alert('大了，还有' + (i-1) + '次机会');
+            } else if (guessNumber < number) {
+                alert('小了，还有' + (i-1) + '次机会');
+            } else {
+                alert('相等');
+                break;
+            }
+
+            if (i == 1){
+                alert('机会用完了，结束');
+                break;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //一个字符串
+        let str = 'abcoefoxyozzoppxxxxxxxxxxxxx';
+        //创建一个对象，键名存出现的字母；键值存数字；
+        let obj = {};
+
+        //字符串以及数组遍历yong for（）；
+        for (let i = 0; i < str.length; i++) {
+            //遍历用 charAt function的到字符
+            let each = str.charAt(i);
+
+            // 判断，将出现次数以值得形式存入对象  出现第一次为1（创建） ；
+            if (obj[each]) {
+                obj[each]++;
+            } else {
+                obj[each] = 1;
+            }
+
+        }
+
+
+        console.log(obj);
+        //对象遍历用for（in）；
+        let max = 0;
+        let a;
+        for (var k in obj) {
+            if (max < obj[k]) {
+                max = obj[k];
+                a = k;
+            }
+        }
+        console.log(max);
+        console.log(a);
+    </script>
+</body>
+
+</html>

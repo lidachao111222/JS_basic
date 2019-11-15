@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 从小到大
+
+        let arr = [44, 33, 22, 11, 10, 19];
+
+        let Tem;
+
+        //多次遍历 （arr.length次）; 得到最终结果
+        for (let i = 0; i < arr.length; i++) {
+
+            //第一次遍历，比较元素之间的大小
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > arr[i + 1]) {
+                    tem = arr[i + 1];
+                    arr[i + 1] = arr[i];
+                    arr[i] = tem;
+                }
+            }
+        }
+
+        console.log(arr);
+    </script>
+
+</body>
+
+</html>
